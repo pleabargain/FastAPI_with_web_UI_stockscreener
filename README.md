@@ -56,6 +56,10 @@ Shows all the docs for the API
 
 ---
 
+I added a basic sql query to this project. I could populate the whole db 
+
+---
+
 # sqlalchemy
 object relational mapper (ORM) for querying databases
 
@@ -65,6 +69,8 @@ object relational mapper (ORM) for querying databases
 * read up on semantic ui and find out if there are other projects like that one
 * Add a confirmation message for user stating that "X symbol has been added".
 * If stock value = None then highlight the row
+* way to remove unwanted stocks
+* way to add notes to a particular stock
 ---
 
 # original README
