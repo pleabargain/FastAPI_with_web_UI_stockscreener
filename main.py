@@ -11,6 +11,7 @@ app = FastAPI()
 
 models.Base.metadata.create_all(bind=engine)
 
+# global variable to store the template location
 templates = Jinja2Templates(directory="templates")
 
 class StockRequest(BaseModel):
@@ -80,16 +81,26 @@ def fetch_stock_data(id: int):
     db.commit()
 
 
-
+# http://127.0.0.1:8000/docs#/default/create_stock_stock_post
 @app.post("/stock")
 async def create_stock(stock_request: StockRequest, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
     """
-    add one or more tickers to the database 
+    (Add empty lines in the comments to maintain
+    formatting.)
+    
+    add one or more tickers to the database. 
+    
     e.g. 
     SAM
+
     LAC
+
+    IBM
+
     SLB
+
     SMPL
+
     background task to use yfinance and load key statistics
     """
 

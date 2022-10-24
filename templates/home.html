@@ -1,3 +1,4 @@
+<!-- extends pulls the content from the other page in the folder -->
 {% extends "layout.html" %}
 
 {% block content %}
@@ -32,7 +33,7 @@ $(document).ready(function() {
 <h2>Filters</h2>
 
 <form method="get">
-
+  <!-- https://semantic-ui.com/elements/input.html -->
 <div class="ui input">
   <input name="forward_pe" type="text" placeholder="Forward P/E" value="{{ forward_pe or '' }}">
 </div>
@@ -46,11 +47,13 @@ $(document).ready(function() {
   <label>Above 50 Day MA</label>
 </div>
 
+<!-- https://semantic-ui.com/modules/checkbox.html -->
 <div class="ui checkbox">
   <input name="ma200" type="checkbox" {% if ma200 %}checked="checked"{% endif %}>
   <label>Above 200 Day MA</label>
 </div>
 
+<!-- setting primary sets the color to blue -->
 <button type="submit" class="ui button primary">Filter</button>
 
 </form>

@@ -1,14 +1,27 @@
+# URL for this repo
+https://github.com/pleabargain/FastAPI_with_web_UI_stockscreener
+
 I have been looking for a complete FastAPI | DB | web app. I am hoping this one will be it!
 
+# pip install -r requirements
+If I run that in the command line
+```pip install -r requirements.txt``` and I have a requirements.txt file in my base directory, all of the python libs will be installed. I didn't know that! :)
+
+----
+
 # installed yfinance
-pip install yfinance
+```pip install yfinance```
+I manually installed yfinance because I knew I had the other libs.
+
 
 I have no idea what it does but I'm guessing it's Yahoo Finance connection.
+
+---
 
 # VS Code
 start a terminal
 
-ctrl + ~
+```ctrl + ~```
 
 Make sure ```main.py``` is there
 
@@ -26,19 +39,33 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed
 (Background on this error at: https://sqlalche.me/e/14/gkpj)
 ```
 
-# TODO 
-Add a confirmation message for user stating that "X symbol has been added".
-
 but then I click on Filter button and my two entries were loaded! Yay!
+
+---
 
 http://127.0.0.1:8000/
 
 Shows all stocks in the db
 
+---
+
 http://127.0.0.1:8000/docs
 
 Shows all the docs for the API
 
+
+---
+
+# sqlalchemy
+object relational mapper (ORM) for querying databases
+
+---
+
+# TODO 
+* read up on semantic ui and find out if there are other projects like that one
+* Add a confirmation message for user stating that "X symbol has been added".
+* If stock value = None then highlight the row
+---
 
 # original README
 Didn't see a lot of examples out there for this framework, so decided to create one.
