@@ -1,3 +1,46 @@
+I have been looking for a complete FastAPI | DB | web app. I am hoping this one will be it!
+
+# installed yfinance
+pip install yfinance
+
+I have no idea what it does but I'm guessing it's Yahoo Finance connection.
+
+# VS Code
+start a terminal
+
+ctrl + ~
+
+Make sure ```main.py``` is there
+
+```ls```
+then run 
+```uvicorn main:app --reload```
+
+go to http://127.0.0.1:8000/
+
+when I try to add a symbol, "GE" for example, I get an error.
+```cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: stocks.symbol     
+[SQL: INSERT INTO stocks (symbol, price, forward_pe, forward_eps, dividend_yield, ma50, ma200) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('GE', None, None, None, None, None, None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+```
+
+# TODO 
+Add a confirmation message for user stating that "X symbol has been added".
+
+but then I click on Filter button and my two entries were loaded! Yay!
+
+http://127.0.0.1:8000/
+
+Shows all stocks in the db
+
+http://127.0.0.1:8000/docs
+
+Shows all the docs for the API
+
+
+# original README
 Didn't see a lot of examples out there for this framework, so decided to create one.
 
 ## Step 1: Hello World of FastAPI, Stub out the API endpoints

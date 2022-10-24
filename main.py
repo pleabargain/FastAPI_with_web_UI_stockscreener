@@ -28,7 +28,8 @@ def get_db():
 @app.get("/")
 def home(request: Request, forward_pe = None, dividend_yield = None, ma50 = None, ma200 = None, db: Session = Depends(get_db)):
     """
-    show all stocks in the database and button to add more
+    http://127.0.0.1:8000/
+    Shows all stocks in the database and button to add more
     button next to each stock to delete from database
     filters to filter this list of stocks
     button next to each to add a note or save for later
@@ -79,10 +80,16 @@ def fetch_stock_data(id: int):
     db.commit()
 
 
+
 @app.post("/stock")
 async def create_stock(stock_request: StockRequest, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
     """
-    add one or more tickers to the database
+    add one or more tickers to the database 
+    e.g. 
+    SAM
+    LAC
+    SLB
+    SMPL
     background task to use yfinance and load key statistics
     """
 
