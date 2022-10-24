@@ -7,6 +7,9 @@ I have been looking for a complete FastAPI | DB | Jinja template | web app. I am
 If I run that in the command line
 ```pip install -r requirements.txt``` and I have a requirements.txt file in my base directory, all of the python libs will be installed. I didn't know that! :)
 
+--- 
+I used ```black``` for formatting my code. It didn't really change anything that I could see. I'll have to run a proper diff next time.
+
 ----
 
 # installed yfinance
@@ -67,6 +70,7 @@ object relational mapper (ORM) for querying databases
 
 # TODO 
 * read up on semantic ui and find out if there are other projects like that one
+    * find code that will sort by column headers in the HTML
 * Add a confirmation message for user stating that "X symbol has been added".
 * If stock value = None then highlight the row
 * way to remove unwanted stocks
