@@ -1,7 +1,7 @@
 # URL for this repo
 https://github.com/pleabargain/FastAPI_with_web_UI_stockscreener
 
-I have been looking for a complete FastAPI | DB | web app. I am hoping this one will be it!
+I have been looking for a complete FastAPI | DB | Jinja template | web app. I am hoping this one will be it! So far so good. Take a look at the video series too: https://www.youtube.com/watch?v=HVZUJb1_Jm8
 
 # pip install -r requirements
 If I run that in the command line
