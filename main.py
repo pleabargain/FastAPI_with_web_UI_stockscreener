@@ -31,7 +31,7 @@ def get_db():
     finally:
         db.close()
 
-
+# this is the route for the home page (decorator)
 @app.get("/")
 def home(
     request: Request,
@@ -49,7 +49,10 @@ def home(
     TODO: button next to each to add a note or save for later
     """
 
-    stocks = db.query(Stock)
+    # prefilter the stocks so that all stocks have price more than 0
+    stocks = db.query(Stock).filter(Stock.price > 0)
+
+    
 
     if forward_pe:
         stocks = stocks.filter(Stock.forward_pe < forward_pe)
